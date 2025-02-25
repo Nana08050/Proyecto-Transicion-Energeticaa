@@ -14,7 +14,7 @@
 }
 
 .b-example-divider {
-  width: 100%;
+  width: 20%;
   height: 3rem;
   background-color: #ffffff  (0, 0, 0, .1);
   border: solid  #ffffff (0, 0, 0, .15);
@@ -27,6 +27,7 @@
   width: 1.5rem;
   height: 100vh;
 }
+
 
 .bi {
   vertical-align: -.125em;
@@ -79,8 +80,6 @@
 /* estilos predefinidos de boopstrap */
 
 
-
-
 .bi {
   display: inline-block;
   width: 1rem;
@@ -95,80 +94,84 @@
   padding-bottom: .75rem;
   background-color: #ffffff(0, 0, 0, .25);
   box-shadow: inset -1px 0 0  (0, 0, 0, .25);
+ 
+
 }
 
 .navbar .form-control {
   padding: .75rem 1rem;
 }
 
-.card{
-  padding-left: 20px;
-}
-
-
-.carousel-inner{
- padding-left: 20px;
- 
-}
-
-.carousel-slide{
-  width: 50%;
-}
 
 .fontHeader {
-  width: 50%;
+  width: 70%;
   color: #1a12b0;
   padding-left: 78px;
   font-size:  30px;
- ;
-
-  } 
-
   
+  
+} 
 
-  .parent {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    gap: 8px;
+
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 8px;
 }
-    
+
 .div1 {
-    grid-column: span 4 / span 4;
+  grid-column: span 4 / span 4;
     grid-row: span 3 / span 3;
-    background-color:#bedcff ;
-}
-
+    background-color:#d1e3f8 ;
+  }
+  
 .div2 {
     grid-column: span 4 / span 4;
     grid-row: span 3 / span 3;
     grid-row-start: 4;
-}
-
-.div3 {
+    background-color: #ffffff;
+  }
+  
+  .div3 {
     grid-column: span 2 / span 2;
     grid-row: span 3 / span 3;
     grid-row-start: 7;
-}
-
-.div4 {
+  }
+  
+  .div4 {
     grid-column: span 2 / span 2;
     grid-row: span 3 / span 3;
     grid-column-start: 3;
     grid-row-start: 7;
-}
-
-.div5 {
+  }
+  
+  .div5 {
     grid-column: span 2 / span 2;
     grid-row: span 3 / span 3;
     grid-row-start: 10;
-}
-
-.div6 {
+  }
+  
+  .div6 {
     grid-column: span 2 / span 2;
     grid-row: span 3 / span 3;
     grid-column-start: 3;
     grid-row-start: 10;
-}
-        
-        
+  }
+  
+  
+  
+  .card{
+    padding-left: 20px;
+  }
+  
+  
+  .carousel-inner{
+   padding-left: 20px;
+   
+  }
+  
+  .carousel-slide{
+    width: 50%;
+  }
