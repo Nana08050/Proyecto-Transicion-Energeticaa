@@ -16,10 +16,10 @@
 .b-example-divider {
   width: 100%;
   height: 3rem;
-  background-color: #68ddbd  (0, 0, 0, .1);
-  border: solid  #68ddbd (0, 0, 0, .15);
+  background-color: #ffffff  (0, 0, 0, .1);
+  border: solid  #ffffff (0, 0, 0, .15);
   border-width: 1px 0;
-  box-shadow: inset 0 .5em 1.5em #68ddbd(0, 0, 0, .1), inset 0 .125em .5em #68ddbd (0, 0, 0, .15);
+  box-shadow: inset 0 .5em 1.5em #ffffff(0, 0, 0, .1), inset 0 .125em .5em #ffffff (0, 0, 0, .15);
 }
 
 .b-example-vr {
@@ -93,7 +93,7 @@
 .navbar-brand {
   padding-top: .75rem;
   padding-bottom: .75rem;
-  background-color: #68ddbd(0, 0, 0, .25);
+  background-color: #ffffff(0, 0, 0, .25);
   box-shadow: inset -1px 0 0  (0, 0, 0, .25);
 }
 
@@ -117,11 +117,58 @@
 
 .fontHeader {
   width: 50%;
-  color: #005227;
+  color: #1a12b0;
   padding-left: 78px;
   font-size:  30px;
-  font-family: "Oswald", serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-  } ;
+ ;
+
+  } 
+
+  
+
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 8px;
+}
+    
+.div1 {
+    grid-column: span 4 / span 4;
+    grid-row: span 3 / span 3;
+    background-color:#bedcff ;
+}
+
+.div2 {
+    grid-column: span 4 / span 4;
+    grid-row: span 3 / span 3;
+    grid-row-start: 4;
+}
+
+.div3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-row-start: 7;
+}
+
+.div4 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 3;
+    grid-row-start: 7;
+}
+
+.div5 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-row-start: 10;
+}
+
+.div6 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 3;
+    grid-row-start: 10;
+}
+        
+        
