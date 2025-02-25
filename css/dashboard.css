@@ -138,6 +138,7 @@
     grid-column: span 2 / span 2;
     grid-row: span 3 / span 3;
     grid-row-start: 7;
+    background-color: #090466;
   }
   
   .div4 {
@@ -145,6 +146,7 @@
     grid-row: span 3 / span 3;
     grid-column-start: 3;
     grid-row-start: 7;
+    background-color: #090466;
   }
   
   .div5 {
@@ -175,3 +177,12 @@
   .carousel-slide{
     width: 50%;
   }
+.mensaje{
+  color: #1a12b0;
+  font-size: 50px;
+  padding-left: 0%;
+  padding-top: 50px;
+  padding-bottom: 20px; 
+  justify-content: center;
+  text-align: center;
+}
