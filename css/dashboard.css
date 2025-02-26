@@ -170,3 +170,22 @@
   border-style: none;
   background-color: #ffffff;
 }
+
+.nav-link {
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: var(--bs-nav-link-font-size);
+  font-weight: var(--bs-nav-link-font-weight);
+  color: var(--bs-nav-link-color);
+  text-decoration: none;
+  background: 0 0;
+  background-color: rgb(138 138 138 / 16%);
+  border: 0;
+  color: #090466;
+  transition: color .15sease-in-out, background-color .15sease-in-out, border-color .15sease-in-out;}
+
+
+  .activeButton{
+    background-color: #1a12b0;
+    color: #ffffff;
+  }
