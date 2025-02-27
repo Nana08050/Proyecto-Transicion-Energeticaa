@@ -11,7 +11,7 @@
   <meta name="generator" content="Hugo 0.122.0">
   <title>Transicion energetica</title>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
   <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -326,5 +326,35 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js"
     integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp"
     crossorigin="anonymous"></script>
+
+    <canvas id="grafica"></canvas> <!-- Elemento donde irá la gráfica -->
+
+    <script>
+        // Hacer una petición al servidor Flask
+        fetch("http://127.0.0.1:5000/datos")
+            .then(response => response.json()) // Convertir la respuesta a JSON
+            .then(data => {
+                const ctx = document.getElementById("grafica").getContext("2d");
+
+                // Dibujar la gráfica con Chart.js
+                new Chart(ctx, {
+                    type: "line",
+                    data: {
+                        labels: data.x, // Eje X (valores de numpy)
+                        datasets: [{
+                            label: "Seno de X",
+                            data: data.y, // Eje Y (valores de numpy)
+                            borderColor: "blue",
+                            borderWidth: 2,
+                            fill: false
+                        }]
+                    },
+                    options: {
+                        responsive: true
+                    }
+                });
+            })
+            .catch(error => console.error("Error cargando datos:", error));
+    </script>
 
 </html>
