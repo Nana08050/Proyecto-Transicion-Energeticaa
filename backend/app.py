@@ -1,17 +1,20 @@
 from flask import Flask, jsonify
-from flask_cors import CORS  # Importar Flask-CORS
-import numpy as np
-
+from flask_cors import CORS
+import pandas as pd
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})  # Habilitar CORS para cualquier origen
 
 @app.route("/datos")
 def datos():
-    # Generar datos con numpy
-    x = np.linspace(0, 10, 100).tolist()  # Lista de valores en el eje X
-    y = np.sin(x).tolist()  # Lista de valores en el eje Y (función seno)
-
-    return jsonify({"x": x, "y": y})  # Enviar los datos en formato JSON
+    # Leer el archivo CSV
+    df = pd.read_csv("./datos.csv")  # Asegúrate de que el archivo está en la misma carpeta
+    
+    # Convertir a JSON
+    datos_json = {
+        "categorias": df["YEAR"].tolist(),
+        "valores": df["VALUE"].tolist()
+    }
+    return jsonify(datos_json)
 
 if __name__ == "__main__":
     app.run(debug=True)

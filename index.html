@@ -107,17 +107,63 @@
 
     </div>
 
-    <div class="div5" style="background-color: rgb(236, 128, 222); display: flex;">
+    <div class="div5" >
       Column 5 grafico de barras
-      <div>
-        <canvas id="myChart"></canvas>
-      </div>
-      <script src="./js/dashboard.js"></script>
+      <canvas id="graficoBarras"></canvas>
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+     async function cargarDatos() {
+            try {
+                const response = await fetch("http://127.0.0.1:5000/datos"); // Llamada a Flask
+                const datos = await response.json();
+
+                const years = Object.keys(datos); // Obtener los años disponibles
+                const categorias = Object.keys(datos[years[0]]); // Obtener los tipos de energía
+
+                const datasets = categorias.map(categoria => ({
+                    label: categoria,
+                    data: years.map(year => datos[year][categoria] || 0), // Si no hay dato, poner 0
+                    backgroundColor: getColor(categoria),
+                }));
+
+                new Chart(document.getElementById("graficoBarras"), {
+                    type: "bar",
+                    data: {
+                        labels: years,
+                        datasets: datasets
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: { position: "top" },
+                            title: { display: true, text: "Energía Generada por Año y Tipo" }
+                        }
+                    }
+                });
+
+            } catch (error) {
+                console.error("Error al cargar los datos:", error);
+            }
+        }
+
+        function getColor(energyType) {
+            const colors = {
+                "Hydro": "skyblue",
+                "Wind": "lightcoral",
+                "Solar": "lightgreen",
+                "Geothermal": "gold"
+            };
+            return colors[energyType] || "gray"; // Color por defecto si no está definido
+        }
+
+        cargarDatos(); // Llamar la función al cargar la página
+      </script>
     </div>
 
 
-    <div class="div6" style="background-color: rgb(207, 30, 30);">
-      Column 6 info explicacion
+    <div class="div6" >
+      <img src="backend/grafico.png" srcset="" style="height: 33em; margin: 18px;">
     </div>
 
   </div>
@@ -327,34 +373,7 @@
     integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp"
     crossorigin="anonymous"></script>
 
-    <canvas id="grafica"></canvas> <!-- Elemento donde irá la gráfica -->
-
-    <script>
-        // Hacer una petición al servidor Flask
-        fetch("http://127.0.0.1:5000/datos")
-            .then(response => response.json()) // Convertir la respuesta a JSON
-            .then(data => {
-                const ctx = document.getElementById("grafica").getContext("2d");
-
-                // Dibujar la gráfica con Chart.js
-                new Chart(ctx, {
-                    type: "line",
-                    data: {
-                        labels: data.x, // Eje X (valores de numpy)
-                        datasets: [{
-                            label: "Seno de X",
-                            data: data.y, // Eje Y (valores de numpy)
-                            borderColor: "blue",
-                            borderWidth: 2,
-                            fill: false
-                        }]
-                    },
-                    options: {
-                        responsive: true
-                    }
-                });
-            })
-            .catch(error => console.error("Error cargando datos:", error));
+ 
     </script>
 
 </html>
