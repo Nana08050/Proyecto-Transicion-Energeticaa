@@ -176,25 +176,24 @@
   justify-content: center;
   text-align: center;
 }
-
-.botonform{
-  
-  
+.botonform {
   background-color: #ffffff;
-  color:black;
+  color: black;
   height: 42px;
   font-size: 20px;
   padding: 10px 24px;
   border-radius: 8px;
   width: 50%;
-  padding-left: 25%;
-
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid black; /* Opcional: para mejor visibilidad */
+  cursor: pointer; /* Mejora la experiencia del usuario */
 }
 
 .botonform:hover {
   background-color:#d1e3f8;
   color: white;}
-
 
 .card {
   padding-left: 20px;}
