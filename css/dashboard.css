@@ -150,7 +150,7 @@
 .consumo {
   color: #ffffff;
   font-size: 20px;
-  padding-left: 5%;
+  padding-left: 25%;
   padding-top: 50px;
   padding-bottom: 20px;
   justify-content: center;
@@ -160,7 +160,7 @@
 .potencia {
   color: #ffffff;
   font-size: 20px;
-  padding-left: 5%;
+  padding-left: 25%;
   padding-top: 50px;
   padding-bottom: 20px;
   justify-content: center;
@@ -170,7 +170,7 @@
 .horas {
   color: #ffffff;
   font-size: 20px;
-  padding-left: 5%;
+  padding-left: 25%;
   padding-top: 50px;
   padding-bottom: 20px;
   justify-content: center;
@@ -178,18 +178,27 @@
 }
 
 .botonform{
-  padding-left: 10%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  justify-content: center;
-  text-align: center;
-  border-style:groove;
+  
+  
   background-color: #ffffff;
-   
+  color:black;
+  height: 42px;
+  font-size: 20px;
+  padding: 10px 24px;
+  border-radius: 8px;
+  width: 50%;
+  padding-left: 25%;
+
 }
+
+.botonform:hover {
+  background-color:#d1e3f8;
+  color: white;}
+
+
 .card {
-  padding-left: 20px;
-}
+  padding-left: 20px;}
+
 
 .carousel-inner {
   padding-left: 20px;
