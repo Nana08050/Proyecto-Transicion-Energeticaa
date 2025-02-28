@@ -146,7 +146,15 @@
   justify-content: center;
   text-align: center;
 }
-
+ .texto2 {
+  color: #ffffff;
+  font-size: 20px;
+  padding-left: 0%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  justify-content: center;
+  text-align: center;}
+  
 .consumo {
   color: #ffffff;
   font-size: 20px;
@@ -195,6 +203,15 @@
   background-color:#d1e3f8;
   color: white;}
 
+.resultado{
+  color: #ffffff;
+  font-size: 20px;
+  padding-left: 0%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  justify-content: center;
+  text-align: center;
+}
 .card {
   padding-left: 20px;}
 
