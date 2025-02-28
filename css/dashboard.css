@@ -98,8 +98,28 @@
   grid-column: span 4 / span 4;
   grid-row: span 3 / span 3;
   grid-row-start: 4;
-  background-color: #ffffff;
+  background:#ffffff; 
+  color:#090466; /* Azul oscuro para contraste */
+  text-align: center;
+  padding: 50px 30px;
+  border-radius: 20px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1.5s ease-in-out;
 }
+
+.mensaje {
+  font-size: 4em; /* Tamaño extra grande */
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #0088cc; /* Azul vibrante */
+  text-shadow: 4px 4px 20px rgba(0, 136, 204, 0.6);
+}
+
+.texto1 {
+  font-size: 
+  3em; /* Tamaño más grande */}
+
+
 
 .div3 {
   grid-column: span 2 / span 2;
@@ -118,7 +138,12 @@
   grid-row: span 3 / span 3;
   grid-column-start: 3;
   grid-row-start: 7;
-  ;
+  background: linear-gradient(135deg, #d1e3f8,  #090466);
+  color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .div5 {
@@ -188,7 +213,7 @@
 }
 .botonform {
   background-color: #ffffff;
-  color: black;
+  color:#090466;
   height: 42px;
   font-size: 20px;
   padding: 10px 24px;
@@ -197,7 +222,7 @@
   display: block;
   margin: 0 auto;
   text-align: center;
-  border: 1px solid black; /* Opcional: para mejor visibilidad */
+  border: 1px solid #090466; /* Opcional: para mejor visibilidad */
   cursor: pointer; /* Mejora la experiencia del usuario */
 }
 
@@ -249,11 +274,12 @@
 .boton{
   padding-left: 5%;
   padding-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   justify-content: center;
   text-align: center;
   border-style: none;
   background-color: #ffffff;
+  
 }
 
 .nav-link {
@@ -279,19 +305,12 @@
     scroll-behavior: smooth;
   }
 
-  .div4 {
-    background: linear-gradient(135deg,  #090466, #d1e3f8);
-    color: #ffffff;
-    padding: 40px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  }
   
   .titulo-info {
     font-size: 2em;
     font-weight: bold;
     margin-bottom: 15px;
+    padding-top: 20px;
   }
   
   .texto-info {
@@ -321,5 +340,4 @@
   }
   
  
-  
   
