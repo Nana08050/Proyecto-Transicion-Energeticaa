@@ -23,7 +23,7 @@
   <script src="js/dashboard.js"></script> <!--JS BOTON DE ARRIBA-->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+  <link rel="icon" href="./imagenes/logoFINAL.ico" type="image/gif" sizes="16x16">
 </head>
 
 <body>
@@ -50,9 +50,9 @@
       <header style="background-color:#ffffff ;" class="d-flex justify-content-center py-4">
         <ul class="nav nav-pills">
           <li class="nav-item"><a href="#"  class="nav-link activeButton" onclick="bienvenida()" >Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Objetivos</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Proyeccion</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Contactanos</a></li>
+          <li class="nav-item"><a href="#calculadora" class="nav-link">Calculadora</a></li>
+          <li class="nav-item"><a href="#graficas" class="nav-link">Graficas</a></li>
+          <li class="nav-item"><a href="#contactanos" class="nav-link">Contactanos</a></li>
         </ul>
       </header>
     </div>
@@ -95,7 +95,7 @@
 
     </div>
 
-    <div class="div3">
+    <div id="calculadora" class="div3">
       <h1 class="titulo">Calculadora de Paneles Solares</h1>
       <p class="texto2">Calcula cuántos paneles solares necesitas para cubrir el consumo de energía de tu hogar</p>
       <label class="consumo" for="consumo">Consumo de energía (kWh):</label>
@@ -135,7 +135,7 @@
 
     </div>
 
-    <div class="div5" >
+    <div id="graficas" class="div5" >
       Column 5 grafico de barras
       <canvas id="graficoBarras"></canvas>
 
@@ -166,7 +166,7 @@
   </div>
 
   <!--Cajitas-->
-  <div class="row">
+  <div id="contactanos" class="row">
 
     <div class="col-4">
       <div class="card" style="width: 100%;">

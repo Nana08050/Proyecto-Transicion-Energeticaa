@@ -154,7 +154,7 @@
   padding-bottom: 20px;
   justify-content: center;
   text-align: center;}
-  
+
 .consumo {
   color: #ffffff;
   font-size: 20px;
@@ -272,3 +272,8 @@
     background-color: #1a12b0;
     color: #ffffff;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
