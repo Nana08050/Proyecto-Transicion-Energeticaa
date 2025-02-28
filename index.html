@@ -36,7 +36,7 @@
       </a>
     </button>
 
-    <h1 class="fontHeader">Energia renovable en la agricultura</h1>
+    <h1 class="fontHeader">Energia renovable</h1>
     <ul class="navbar-nav flex-row d-md-none">
 
     </ul>
@@ -100,15 +100,15 @@
     <div class="div3">
       <h1 class="titulo">Calculadora de Paneles Solares</h1>
       <label class="consumo" for="consumo">Consumo de energía (kWh):</label>
-      <input type="number" id="consumo" required>
+      <input  type="number" id="consumo" required>
       <br>
-      <label for="potenciaPanel">Potencia del panel solar (W):</label>
+      <label  class="potencia" for="potenciaPanel">Potencia del panel solar (W):</label>
       <input type="number" id="potenciaPanel" required>
       <br>
-      <label for="horasSol">Horas de sol al día:</label>
+      <label class="horas" for="horasSol">Horas de sol al día:</label>
       <input type="number" id="horasSol" required>
       <br>
-      <button onclick="calcularPaneles()">Calcular Paneles Necesarios</button>
+      <button class="botonform" onclick="calcularPaneles()">Calcular Paneles Necesarios</button>
       <h2 id="resultado"></h2>
   
       <script>
