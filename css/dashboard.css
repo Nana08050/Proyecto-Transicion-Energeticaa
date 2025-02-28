@@ -105,7 +105,12 @@
   grid-column: span 2 / span 2;
   grid-row: span 3 / span 3;
   grid-row-start: 7;
-  background-color: #090466;
+  background: linear-gradient(135deg,  #090466, #d1e3f8);
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);;
 }
 
 .div4 {
@@ -113,7 +118,7 @@
   grid-row: span 3 / span 3;
   grid-column-start: 3;
   grid-row-start: 7;
-  background-color: #090466;
+  ;
 }
 
 .div5 {
@@ -158,7 +163,6 @@
 .consumo {
   color: #ffffff;
   font-size: 20px;
-  padding-left: 25%;
   padding-top: 50px;
   padding-bottom: 20px;
   justify-content: center;
@@ -168,7 +172,6 @@
 .potencia {
   color: #ffffff;
   font-size: 20px;
-  padding-left: 25%;
   padding-top: 50px;
   padding-bottom: 20px;
   justify-content: center;
@@ -178,7 +181,6 @@
 .horas {
   color: #ffffff;
   font-size: 20px;
-  padding-left: 25%;
   padding-top: 50px;
   padding-bottom: 20px;
   justify-content: center;
@@ -276,4 +278,48 @@
   html {
     scroll-behavior: smooth;
   }
+
+  .div4 {
+    background: linear-gradient(135deg,  #090466, #d1e3f8);
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .titulo-info {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .texto-info {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 20px;
+  }
+  
+  .lista-info {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .lista-info li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .lista-info i {
+    font-size: 1.5em;
+    color:#ffffff;
+  }
+  
+ 
+  
   
